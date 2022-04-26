@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #container{
+        height: 300px;
+        width: 50%;
+        margin: auto;
+        border: 1px solid;
+        text-align: center;
+    }
+  input,submit{
+      display: block;
+      margin: auto;
+      width: 80%;
+     
+      margin-top: 1%;
+  }
+  #cate{
+      width: 80%;
+      text-align: center;
+    
+      margin-top: 1%;
+  }
+  #pro{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+      overflow: hidden;
+      width: 50%;
+      margin: auto;
+      
+  }
+  #pro>div{
+   margin: auto;
+   background-color: aqua;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   color: black;
+   font-weight: bold;
+   border: 1px solid;
+   margin-top: 1%;
+  }
+</style>
+<body>
+   
+    <div id="container">
+        <h1>ADD SOME PRODUCT </h1>
+          <form id="form">
+             <select id="cate">
+              <option value="ELECTRONIC"> Electronic</option>
+              <option value="FURNITURE"> Furniture</option>
+              <option value="HOME APPLIANCE"> Home appliance</option>
+              <option value="BOOK"> book</option>
+             </select>
+
+             <input type="text" id="title">
+             <input type="text" id="desc">
+             <input type="number" id="price">
+             <input type="submit" id="sub">
+          </form>
+    </div>
+
+    <div id="pro"></div>
+</body>
+</html>
+
+
+<script>
+ 
+
+  document.querySelector("#form").addEventListener("submit",myfunction)
+
+  function myfunction(){
+     event.preventDefault();
+     var tis=document.querySelector("#cate").value 
+     var title=document.querySelector("#title").value 
+     var decri=document.querySelector("#desc").value 
+     var pri=document.querySelector("#price").value 
+     
+     
+     var category=document.createElement("h2")
+      category.innerText=tis
+     var titl=document.createElement("p")
+     titl.innerText=title
+     var descrip=document.createElement("p")
+       descrip.innerText=decri
+      var rupaya=document.createElement("p")
+      rupaya.innerText=pri
+
+      var box=document.createElement("div")
+      
+      var del=document.createElement("div")
+      del.innerText="Delete"
+      del.style.background="red"
+      del.style.cursor="pointer"
+
+      del.addEventListener("click",deleterow)
+
+      box.append(category,titl,descrip,rupaya,del)
+
+      document.querySelector("#pro").append(box)
+
+     
+  }
+  function deleterow(){
+        console.log( event.target.parentNode.remove())
+      }
+</script>
+

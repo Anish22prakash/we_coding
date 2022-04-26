@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;" >wedding age checker</h1>
+    <input type="number" id="year" style="margin-left:43%">
+    <button onclick="checkage()" >submit</button>
+    <p id="check" style="text-align: center; font-size: 20px; font-weight: bold;" >your credentials</p>
+</body>
+</html>
+
+<script>
+    function checkage(){
+   var agestore = document.getElementById("year").value 
+     
+   if(agestore<=2000){
+   document.getElementById("check").innerText="yes !!!you are eligible"
+    }
+    else {
+        document.getElementById("check").innerText="No!!!! Not eligible"
+    }
+}
+</script>

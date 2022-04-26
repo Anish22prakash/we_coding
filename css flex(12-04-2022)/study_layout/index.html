@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .first{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .studylab{
+        width: 40%;
+        height :60px;
+    }
+    .studylab>div{
+        width: 30%;
+        height :60px;
+        display: flex;
+        margin-left: 50px;
+    }
+    .content{
+        width: 40%;
+        height: 60px;
+        margin-left:120px ;
+        display: flex;
+    }
+    .content>div{
+        width: 18%;
+        height :60px;
+        text-align: center;
+        font-size: 22px;
+    }
+    .studylab>div>h1{
+        text-align: center;
+         padding: 20px 20px 20px 20px;
+        margin-top: -10px;
+        color: white;
+        background-color: rgb(164, 12, 240);
+    }
+    .content>div>h4{
+       text-align: center;
+       margin-top: 12px;
+    }
+    .content>div>.main{
+        color: blue;
+    }
+    #big{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        margin-top: 80px;
+    }
+    #big>div{
+        height: 500px;
+        width: 50%;
+    }
+    #big>div>h6{
+        margin: 20px;
+        font-weight:bold;
+        color: rgb(128, 15, 233);
+    }
+    #big>div>h1{
+        margin: 20px;
+        font-size: 38px;
+    }
+    #big>div>p{
+        margin: 20px;
+        color: grey;
+    }
+    img{
+        height: 100px;
+        margin: 20px;
+        margin-top: -10px;
+        display: flex;
+    }
+    img+h3{
+         margin: 20px;
+         margin-left: 220px;
+         margin-top: -90px;
+    }
+    .right>.upar{
+        height: 220px;
+        width:100%;
+        display: flex;
+    }
+    .right>.niche{
+        height: 220px;
+        width:100%;
+        display: flex;
+        margin-top: 25px;
+    }
+    .upar>div{
+        height: 220px;
+        width:45%;
+        margin: auto;
+    }
+    .niche>div{
+        height: 220px;
+        width:45%;
+        margin: auto;
+    }
+    .upar>div>img{
+        margin-top:10px;
+        height: 60px;
+        margin: 20px;
+        display: block;
+    }
+    .upar>div>h3{
+        margin-top: 30px;
+        margin-left:-2px;
+        margin: 20px;
+    }
+    .upar>div>p{
+        margin: 20px;
+        color: grey;
+        font-size: 15px;
+    }
+    .niche>div>img{
+        margin-top:10px;
+        height: 60px;
+        margin: 20px;
+        display: block;
+    }
+    .niche>div>h3{
+        margin-top: 30px;
+        margin-left:-2px;
+        margin: 20px;
+    }
+    .niche>div>p{
+        margin: 20px;
+        color: grey;
+        font-size: 15px;
+    }
+</style>
+<body>
+    <div class="first">
+        <div class="studylab">
+            <div>
+                <h1>StudyLab</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div><h4 class="main">Home</h4></div>
+            <div><h4>About</h4></div>
+            <div><h4>Course</h4></div>
+            <div><h4>Instructor</h4></div>
+            <div><h4>Blog</h4></div>
+            <div><h4>Content</h4></div>
+        </div>
+    </div>
+    <div id="big">
+        <div>
+            <h6>WELCOME TO STUDYLAB</h6>
+            <h1>We Are StudyLab An Online Learning Center</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores vel, iusto
+                veniam ex, nulla nisi praesentium voluptas libero aspernatur voluptatibus dolor
+                 assumenda tempora, reprehenderit inventore eius dolorem officia quisquam dolore.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit labore numquam enim esse
+                 accusantium quae ducimus similique exercitationem facere. Porro autem et doloremque
+                 atque distinctio reiciendis neque odit ipsa dicta</p>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                     voluptatum quos, delectus pariatur accusantium ducimus sapiente aperiam, quae
+                     enim reiciendis amet. Veniam voluptatem expedita aliquam totam voluptatum quia neque consequatur?
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo alias quidem error enim reprehenderit quod
+                     rerum debitis at deleniti sapiente? Voluptatibus culpa
+                     repellat animi? Eos magnam ipsa temporibus modi officia.
+                 </p>
+                 <img src="https://tse3.mm.bing.net/th?id=OIP.F6leqMT7GocaK5KGasdvnwHaEo&pid=Api&P=0&w=247&h=154" alt="">
+                 <h3>learn anything from studylab,<br>watch video.</h3>
+        </div>
+        <div class="right">
+            <div class="upar">
+                <div>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.ynqex1tLQxZTOSHK1ZiTcgHaHa&pid=Api&P=0&w=160&h=160" alt="">
+                    <h3>Top Quality Content</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus Lorem, ipsum dolor sit amet consec</p>
+                </div>
+                <div>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.ynqex1tLQxZTOSHK1ZiTcgHaHa&pid=Api&P=0&w=160&h=160" alt="">
+                    <h3>Top Quality Content</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus Lorem, ipsum dolor sit amet consec</p>
+                </div>
+            </div>
+            <div class="niche">
+                <div>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.ynqex1tLQxZTOSHK1ZiTcgHaHa&pid=Api&P=0&w=160&h=160" alt="">
+                    <h3>Top Quality Content</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus Lorem, ipsum dolor sit amet consec</p>
+                </div>
+                <div>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.ynqex1tLQxZTOSHK1ZiTcgHaHa&pid=Api&P=0&w=160&h=160" alt="">
+                    <h3>Top Quality Content</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus Lorem, ipsum dolor sit amet consec</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

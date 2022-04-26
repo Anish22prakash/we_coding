@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Payment-layout</title>
+
+    <style>
+     * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Roboto", sans-serif;
+      }
+   #head{
+       height:100px;
+       width: 25%;
+       margin:auto;
+       margin-top:2%;
+       line-height: 40px;
+   }
+   #head>h1{
+       text-align: center;
+   }
+   #head+p{
+       text-align: center;
+       color:grey;
+       margin-top:1%;
+   }
+   #last{
+       height: 400px;
+       width: 80%;
+       border:1px ;
+       margin:auto;
+       margin-top: 5%;
+       display: flex;
+     
+       
+   }
+   #last>div{
+       height:100%;
+       width:30%;
+       border:2px  grey;
+       border-radius: 10px;
+       margin:auto;
+       box-shadow: grey 0px 5px 5px 0px;
+       
+       }
+       #last>div>h2,h1,p,button{
+           text-align: center;
+       }
+       #last>div>h1{
+           font-weight: 700;
+           color:rgb(101, 141, 101);
+           padding-top:10%;
+           
+       }
+       #last>div>p{
+           color:grey;
+           padding-top: 5%;
+       }
+       #last>div>button{
+           color:rgb(92, 92, 154);
+           background-color: white;
+          padding: 10px 10px 10px 10px;
+          margin-top: 8%;
+          margin-left: 37%;
+          border-radius: 5px;
+          font-size: 16px;
+          font-weight: 400;
+       }
+       #last>div>button:hover{
+           background-color: rgb(85, 85, 154);
+           color: white;
+       }
+       #last>div>h2{
+           padding-top: 20%;
+       }
+       #last>div+div>h2+h1
+       {
+           color:orange;
+       }
+       #last>div+div+div>h2+h1{
+           color:rgb(72, 72, 205)
+       }
+  
+    </style>
+</head>
+<body>
+    
+     <div id="head">
+         <h1>Choose a plan that right for your business</h1>
+       </div>
+       <p>We collect reviews from our users so you get an honest opinion of what an <br>experinece with our website are really like!</p>
+   
+       <div id="last">
+
+        <!--1st box-->
+           <div>
+               <h2>Starter Plan</h2>
+               <h1>Free</h1>
+               <p><i>PER MONTH</i><p>
+               <p>We collect reviews from our users so you get an honest opinion of what an experinece with our website</p>
+               <button>Start Now</button>
+           </div>
+
+    <!--2nd box-->
+           <div>
+            <h2>Business Plan</h2>
+            <h1>$39.0</h1>
+            <p><i>PER MONTH</i><p>
+            <p>We collect reviews from our users so you get an honest opinion of what an experinece with our website</p>
+            <button>Start Now</button>
+
+           </div>
+
+
+           <!--3rd box-->
+           <div>
+            <h2>Premium Plan</h2>
+            <h1>$59.0</h1>
+            <p><i>PER MONTH</i><p>
+            <p>We collect reviews from our users so you get an honest opinion of what an experinece with our website</p>
+            <button>Start Now</button>
+
+           </div>
+        </div>
+   
+        
+      
+
+    
+</body>
+</html>

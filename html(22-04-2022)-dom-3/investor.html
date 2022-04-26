@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    #prnt{
+        display: flex;
+        height: 300px;
+        width: 100%;
+    }
+    #prnt>div{
+        border: 1px ;
+        height: 500px;
+        width: 23%;
+        margin: auto;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    #prnt>div>p+img{
+        height: 50px;
+    }
+   
+</style>
+<body>
+    <div id="head">
+    </div>
+    <div id="prnt">
+    
+      </div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    var data=[
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",name:"VIJAY SHEKHAR SHARMA",position:"COFOUNDER & CEO", CLOGO:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",name:"KUNAL SHAH",position:"FOUNDER", CLOGO:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",name:"AMRISH RAU",position:"CEO", CLOGO:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",name:"SAMPAND SWAIN",position:"COFOUNDER & CEO", CLOGO:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"}
+    ]
+
+   var head = document.createElement("h1");
+   head.innerText="STRATEGIC INVESTORS"
+   document.querySelector("#head").append(head)
+
+  data.forEach(function(ele){
+    var bx=document.createElement("div")
+
+    var img=document.createElement("img")
+      img.setAttribute("src",ele.pic)
+      img.style.width="100%"
+
+
+    var name=document.createElement("h2")
+    name.innerText=ele.name
+
+    var post=document.createElement("p")
+    post.innerText=ele.position
+
+    var comp=document.createElement("img")
+    comp.setAttribute("src",ele.CLOGO)
+    
+
+   bx.append(img,name,post,comp)
+   document.querySelector("#prnt").append(bx)
+
+  })
+ 
+
+</script>

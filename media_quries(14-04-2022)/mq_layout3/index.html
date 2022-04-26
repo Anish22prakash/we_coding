@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container{
+            border: 1px;
+            height: auto;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px 150px 150px 150px;
+            gap:20px;
+            grid-template-areas: 
+            "bx1 bx1 bx1"
+            "bx2 bx2 bx3"
+            "bx2 bx2 bx4"
+            "bx2 bx2 bx5";
+        }
+
+        #container>div:nth-child(1){
+            grid-area: bx1;
+            background-color: yellow;
+        }
+        #container>div:nth-child(2){
+            grid-area: bx2;
+            background-color: red;
+        }
+        #container>div:nth-child(3){
+            grid-area: bx3;
+            background-color:greenyellow;
+        }
+        #container>div:nth-child(4){
+            grid-area: bx4;
+            background-color:greenyellow;
+        }
+        #container>div:nth-child(5){
+            grid-area: bx5;
+            background-color:greenyellow;
+        }
+        #container>div{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        @media all and (min-width:200px) and (max-width:450px){
+         #container{
+            grid-template-columns: 150px;
+            grid-template-rows: 50px 200px 150px 150px 150px;
+            gap:20px;
+            grid-template-areas: 
+            "bx1"
+            "bx2"
+            "bx3"
+            "bx4"
+            "bx5";
+        }
+    }
+
+        @media all and (min-width:451px) and (max-width:700px){
+         #container{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px 200px 150px;
+            gap:20px;
+            grid-template-areas: 
+            "bx1 bx1 bx1"
+            "bx2 bx2 bx2"
+            "bx3 bx4 bx5";
+            
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Navigation</div>
+        <div>Left box</div>
+        <div>Right box</div>
+        <div>Right box</div>
+        <div>Right box</div>
+    </div>
+</body>
+</html>

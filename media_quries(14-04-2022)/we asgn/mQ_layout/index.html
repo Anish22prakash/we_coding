@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container{
+            border: 1px ;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 50px 200px;
+            gap:20px;
+
+            grid-template-areas: 
+            "b1 b1 b1 b1"
+            "b2 b3 b4 b5";
+        }
+        #container>div{
+            border: 1px solid;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #container>div:nth-child(1){
+            background-color: yellow;
+            grid-area: b1;
+        }
+        #container>div:nth-child(2){
+            background-color:red ;
+            grid-area: b2;
+            
+        }
+        #container>div:nth-child(3){
+            background-color: green;
+            grid-area: b3;
+        }
+        #container>div:nth-child(4){
+            background-color: blue;
+            grid-area: b4;
+        }
+        #container>div:nth-child(5){
+            background-color: grey;
+            grid-area: b5;
+            
+        }
+
+        @media all and (min-width:451px) and (max-width:700px){
+            #container{
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 50px 200px 200px;
+            gap:20px;
+
+            grid-template-areas: 
+            "b1 b1"
+            "b2 b3"
+            "b4 b5";
+        }
+
+        }
+        @media all and (min-width:200px) and (max-width:450px){
+            #container{
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 50px 200px 200px 200px 200px;
+            gap:20px;
+
+            grid-template-areas: 
+            "b1"
+            "b2"
+            "b3"
+            "b4"
+            "b5";
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Navigation</div>
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+    </div>
+</body>
+</html>

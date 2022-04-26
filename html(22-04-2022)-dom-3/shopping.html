@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+  width:100%;
+  height:500px;
+  border:1px;
+  margin:auto;
+  display:flex
+}
+#casebox{
+  display:flex;
+ justify-content:space-between;
+  width:50%;
+  margin:auto;
+}
+#container>div{
+  margin:auto;
+  text-align: center;
+  border:1px ;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius:5px;
+}
+</style>
+<body>
+  <div id="container">
+   
+  </div>
+</body>
+</html>
+
+<script>
+
+var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+data.forEach(function(ele){
+   var box= document.createElement("div")
+   
+   var pic=document.createElement("img")
+    pic.setAttribute("src",ele.imgUrl)
+   var name=document.createElement("h3")
+   name.innerText=ele.name
+  var pricediv=document.createElement("div")
+    var price=document.createElement("p")
+    price.innerText=ele.price
+    var discount=document.createElement("p")
+    discount.innerText=ele.strikedOffPrice
+  pricediv.setAttribute("id","casebox")
+  pricediv.append(price,discount)
+  box.append(pic,name,pricediv)
+
+  document.querySelector("#container").append(box)
+})
+</script>
